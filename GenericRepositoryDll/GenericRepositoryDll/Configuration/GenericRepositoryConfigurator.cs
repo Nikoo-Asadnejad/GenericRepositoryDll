@@ -11,7 +11,7 @@ namespace GenericRepositoryDll.Configuration
 {
   public static class GenericRepositoryConfigurator
   {
-    public static void InjectServices(IServiceCollection services , DbContext appContext)
+    public static void InjectServices(IServiceCollection services)
     {
       services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
     }

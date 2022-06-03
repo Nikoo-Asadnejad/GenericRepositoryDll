@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>GenericRepositoryDll</id>
+    <version>1.0.0</version>
+    <authors>GenericRepositoryDll</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.EntityFrameworkCore" version="6.0.5" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Abstractions" version="6.0.5" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\bin\Release\net6.0\GenericRepositoryDll.dll" target="lib\net6.0\GenericRepositoryDll.dll" />
+  </files>
+</package>
