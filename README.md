@@ -1,0 +1,2 @@
+# GenericRepositoryDll
+Generic Repository pattern
