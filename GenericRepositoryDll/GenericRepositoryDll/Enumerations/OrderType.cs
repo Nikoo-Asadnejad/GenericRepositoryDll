@@ -1,6 +1,6 @@
 namespace GenericReositoryDll.Enumrations
 {
-  public enum OrderByType
+  public enum OrderType
   {
     Desc,
     Asc

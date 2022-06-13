@@ -56,8 +56,8 @@ namespace GenericReositoryDll.Repository.GenericRepository
     /// <returns></returns>
     public async Task<IQueryable<object>> GetListAsync(Expression<Func<T, bool>> query = null,
       Func<T,object> selector = null,
-      Func<T, IOrderedQueryable<T>> orderBy = null,
-      OrderByType? orderByType = null,
+      Func<T, object> orderBy = null,
+      OrderType? orderType = null,
       List<string> includes = null,
       int? skip = null,
       int? take = null,
@@ -76,9 +76,9 @@ namespace GenericReositoryDll.Repository.GenericRepository
       if (selector != null) models.Select(selector);
       if(skip != null) models.Skip((int)skip);
       if(take != null) models.Take((int)take);
-      if (orderBy != null && orderByType == OrderByType.Asc) models = models.OrderBy(orderBy).AsQueryable();
-      if (orderBy != null && orderByType == OrderByType.Desc) models = models.OrderByDescending(orderBy).AsQueryable();
-      if (orderBy != null && orderByType == null) models = models.OrderBy(orderBy).AsQueryable();
+      if (orderBy != null && orderType == OrderType.Asc) models = models.OrderBy(orderBy).AsQueryable();
+      if (orderBy != null && orderType == OrderType.Desc) models = models.OrderByDescending(orderBy).AsQueryable();
+      if (orderBy != null && orderType == null) models = models.OrderBy(orderBy).AsQueryable();
       if (distinct != null) models.Distinct();
 
       return models;
@@ -86,13 +86,13 @@ namespace GenericReositoryDll.Repository.GenericRepository
     }
 
 
-    public async Task<IQueryable<T>> GetListAsync(Expression<Func<T, bool>> query = null,
-     Func<T, IOrderedQueryable<T>> orderBy = null,
-     OrderByType? orderByType = null,
+    public async Task<IQueryable<T>> GetListAsync<T>(Expression<Func<T, bool>> query = null,
+     Func<T, object> orderBy = null,
+     OrderType? orderType = null,
      List<string> includes = null, int? skip = 0,
      int? take = null, bool? distinct = null)
     {
-      var result = (IQueryable<T>)GetListAsync(query, orderBy, orderByType, includes, skip).Result;
+      var result = (IQueryable<T>)GetListAsync(query, orderBy, orderType, includes, skip).Result;
       return result;
     }
 
@@ -121,7 +121,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
       
     }
 
-    public async Task<T> GetSingleAsync(Expression<Func<T, bool>> query,
+    public async Task<T> GetSingleAsync<T>(Expression<Func<T, bool>> query,
       List<string> includes = null)
     {
       var result = (T)GetSingleAsync(query, includes).Result;

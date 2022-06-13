@@ -13,7 +13,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
       Func<T, object> selector ,
       List<string> includes = null);
 
-    Task<T> GetSingleAsync(Expression<Func<T, bool>> query,
+    Task<T> GetSingleAsync<T>(Expression<Func<T, bool>> query,
       List<string> includes = null);
 
     /// <summary>
@@ -30,16 +30,16 @@ namespace GenericReositoryDll.Repository.GenericRepository
     /// <returns></returns>
     Task<IQueryable<object>> GetListAsync(Expression<Func<T, bool>> query = null,
                                 Func<T, object> selector = null,
-                                Func<T, IOrderedQueryable<T>> orderBy = null,
-                                OrderByType? orderByType = null,
+                                Func<T, object> orderBy = null,
+                                OrderType? orderType = null,
                                 List<string> includes = null,
                                 int? skip = 0,
                                 int? take = null,
                                 bool? distinct = null);
 
-    Task<IQueryable<T>> GetListAsync(Expression<Func<T, bool>> query = null,
-                                Func<T, IOrderedQueryable<T>> orderBy = null,
-                                OrderByType? orderByType = null,
+    Task<IQueryable<T>> GetListAsync<T>(Expression<Func<T, bool>> query = null,
+                                Func<T, object> orderBy = null,
+                                OrderType? orderType = null,
                                 List<string> includes = null,
                                 int? skip = 0,
                                 int? take = null,
