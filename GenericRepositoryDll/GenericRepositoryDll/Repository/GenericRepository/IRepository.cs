@@ -28,7 +28,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
     /// <param name="take">take</param>
     /// <param name="distinct">isDistinct</param>
     /// <returns></returns>
-    Task<IQueryable<object>> GetListAsync(Expression<Func<T, bool>> query = null,
+    Task<List<object>> GetListAsync(Expression<Func<T, bool>> query = null,
                                 Func<T, object> selector = null,
                                 Func<T, object> orderBy = null,
                                 OrderType? orderType = null,
@@ -37,7 +37,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
                                 int? take = null,
                                 bool? distinct = null);
 
-    Task<IQueryable<T>> GetListAsync<T>(Expression<Func<T, bool>> query = null,
+    Task<List<T>> GetListAsync<T>(Expression<Func<T, bool>> query = null,
                                 Func<T, object> orderBy = null,
                                 OrderType? orderType = null,
                                 List<string> includes = null,
