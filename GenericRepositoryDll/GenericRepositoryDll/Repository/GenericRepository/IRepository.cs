@@ -44,6 +44,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
                                 int? skip = 0,
                                 int? take = null,
                                 bool? distinct = null);
+
     Task<long> GetCountAsync(Expression<Func<T, bool>> query = null);
 
     Task AddAsync(T model);

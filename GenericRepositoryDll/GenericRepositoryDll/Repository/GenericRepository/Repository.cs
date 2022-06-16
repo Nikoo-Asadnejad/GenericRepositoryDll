@@ -87,7 +87,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
      List<string> includes = null, int? skip = 0,
      int? take = null, bool? distinct = null)
     {
-      List<T> result = GetListAsync(query, orderBy, orderType, includes, skip).Result;
+      List<T> result = GetListAsync(query, orderBy, orderType, includes, skip , take , distinct).Result;
       return result;
     }
 
@@ -102,13 +102,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
 
       dynamic model = _model.AsNoTrackingWithIdentityResolution().AsQueryable();
       if (includes != null && includes.Count() > 0)
-      {
-        foreach (var includeProperty in includes)
-        {
-          model.Include(includeProperty);
-        }
-      }
-
+        includes.ForEach(includeProperty => model.Include(includeProperty));
       if (query != null) model = model.Where(query);
       if (selector != null) model = model.Select(selector).FirstOrDefault();
       
