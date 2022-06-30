@@ -1,4 +1,4 @@
-using GenericReositoryDll.Repository.GenericRepository;
+using GenericRepositoryDll.Repository.GenericRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;

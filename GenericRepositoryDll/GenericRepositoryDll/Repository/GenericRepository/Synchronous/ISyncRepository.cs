@@ -6,8 +6,8 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenericRepositoryDll.Repository.GenericRepository
-{
+namespace GenericRepositoryDll.Repository.GenericRepository;
+
   public partial interface IRepository<T>
   {
     T Find(long id);
@@ -41,4 +41,4 @@ namespace GenericRepositoryDll.Repository.GenericRepository
     bool Any(Expression<Func<T, bool>> query);
     void Save();
   }
-}
+
