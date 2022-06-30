@@ -17,7 +17,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
     public async Task AddAsync(T model)
     {
       await _model.AddAsync(model);
-      await _context.SaveChangesAsync();
+      await SaveAsync();
     }
 
     public void Add(T model)
@@ -29,7 +29,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
     public async Task AddRangeAsync(IEnumerable<T> models)
     {
       await _model.AddRangeAsync(models);
-      await _context.SaveChangesAsync();
+      await SaveAsync();
     }
 
     public void AddRange(IEnumerable<T> models)
@@ -48,7 +48,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
     {
       T model =  _context.FindAsync<T>(id).Result;
       if(model != null) _model.Remove(model);
-      await _context.SaveChangesAsync();
+      await SaveAsync();
     }
 
     public void Delete(long id)
@@ -61,7 +61,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
     public async Task DeleteRangeAsync(IEnumerable<T> models)
     {
       _model.RemoveRange(models);
-      await _context.SaveChangesAsync();
+      await SaveAsync();
     }
 
     public void DeleteRange(IEnumerable<T> models)
@@ -202,7 +202,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
     public async Task UpdateAsync(T model)
     {
       _model.Update(model);
-      await _context.SaveChangesAsync();
+      await SaveAsync();
     }
     public void Update(T model)
     {
@@ -212,7 +212,7 @@ namespace GenericReositoryDll.Repository.GenericRepository
     public async Task UpdateRangeAsync(IEnumerable<T> models)
     {
       _model.UpdateRange(models);
-      await _context.SaveChangesAsync();
+      await SaveAsync();
     }
     public  void UpdateRange(IEnumerable<T> models)
     {
