@@ -1,12 +1,4 @@
-D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\obj\Debug\net6.0\GenericRepositoryDll.csproj.AssemblyReference.cache
 D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\obj\Debug\net6.0\GenericRepositoryDll.GeneratedMSBuildEditorConfig.editorconfig
 D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\obj\Debug\net6.0\GenericRepositoryDll.AssemblyInfoInputs.cache
 D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\obj\Debug\net6.0\GenericRepositoryDll.AssemblyInfo.cs
 D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\obj\Debug\net6.0\GenericRepositoryDll.csproj.CoreCompileInputs.cache
-D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\bin\Debug\net6.0\GenericRepositoryDll.deps.json
-D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\bin\Debug\net6.0\GenericRepositoryDll.dll
-D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\bin\Debug\net6.0\ref\GenericRepositoryDll.dll
-D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\bin\Debug\net6.0\GenericRepositoryDll.pdb
-D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\obj\Debug\net6.0\GenericRepositoryDll.dll
-D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\obj\Debug\net6.0\ref\GenericRepositoryDll.dll
-D:\web development\projects\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\GenericRepositoryDll\obj\Debug\net6.0\GenericRepositoryDll.pdb
